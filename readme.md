@@ -1,7 +1,7 @@
 #Start up Server
 Navigate into server folder in terminal and run command:
 
-`npm run dev`
+`nodemon run dev`
 
 Check if server is running on localhost:5000/api
 

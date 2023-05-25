@@ -6,7 +6,7 @@ Navigate into server folder in terminal and run command:
 Check if server is running on localhost:5000/api
 
 # Start up Client
-Navigate into client folder in terminal and command:
+Navigate into client folder in terminal and run command:
 
 `npm start`
 

@@ -18,7 +18,7 @@ function Header(){
                     <Nav.Link href="#home">
                         <img className="navbar-logo" src="/images/booky-logo.png" alt="Logo"></img>
                     </Nav.Link>
-                    <Nav.Link href="#home" className="navbar-brand">Book-IT</Nav.Link>
+                    <Nav.Link href="#home" className="navbar-brand">Booky</Nav.Link>
                 </div> 
                     
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

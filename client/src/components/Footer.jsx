@@ -4,7 +4,7 @@ function Footer(){
     return(
         <footer>
             <div className="footer">
-                <p>Book-IT - UX exam - <a style={{textDecoration: 'none', color: '#fff'}} href="https://www.instagram.com/rasmuslnielsen_/"> @rasmuslnielsen_</a></p>
+                <p>Booky - UX exam - <a style={{textDecoration: 'none', color: '#fff'}} href="https://www.instagram.com/rasmuslnielsen_/"> @rasmuslnielsen_</a></p>
             </div>
         </footer>
     );

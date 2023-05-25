@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Header";
 import Footer from "./Footer";
 import Book from "./Book";
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function App() {
 
@@ -28,7 +30,13 @@ function App() {
           <p>Loading...</p>
         ): 
         backendData.map((book, index) => (
-        <Book key={index} book={book} />
+          <Row xs={1} md={2} className="g-4">
+            {Array.from({ length: 1 }).map((_, idx) => (
+              <Col>
+                <Book key={index} book={book} />
+              </Col>
+            ))}
+          </Row>
       ))
         }
       </div>

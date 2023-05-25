@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Book from "./Book";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import UserLogin from './UserLogin';
 
 function App() {
 
@@ -19,8 +20,7 @@ function App() {
       }
     )
   }, []);
- 
-  console.log(backendData[0].title)
+
   
   return (
     <div> 

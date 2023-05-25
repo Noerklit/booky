@@ -1,12 +1,12 @@
-#Start up Server
+# Start up Server
 Navigate into server folder in terminal and run command:
 
-`npm run dev`
+`nodemon run dev`
 
 Check if server is running on localhost:5000/api
 
-#Start up Client
-Navigate into client folder in terminal and command:
+# Start up Client
+Navigate into client folder in terminal and run command:
 
 `npm start`
 

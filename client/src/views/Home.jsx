@@ -21,15 +21,15 @@ function Home() {
           {(typeof backendData === 'undefined') ? (
             <p>Loading...</p>
           ): 
-          backendData.map((book, index) => (
-            <Row xs={1} md={2} className="g-4">
-              {Array.from({ length: 1 }).map((_, idx) => (
-                <Col>
-                  <Book key={index} book={book} />
-                </Col>
+        <Row>
+          {backendData.map((book, index) => (
+            <Col>
+            {Array.from({ length: 1 }).map((_, idx) => (
+                  <Book key={index} book={book}/>
               ))}
-            </Row>
-        ))
+            </Col>
+            ))}
+        </Row>
           }
         </div>
     );

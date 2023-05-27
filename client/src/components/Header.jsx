@@ -15,17 +15,18 @@ function Header(){
                 <Container className="">
                 
                 <div className="d-flex">
-                    <Nav.Link href="#home">
+                    <Nav.Link href="/">
                         <img className="navbar-logo" src="/images/booky-logo.png" alt="Logo"></img>
                     </Nav.Link>
-                    <Nav.Link href="#home" className="navbar-brand">Booky</Nav.Link>
+                    <Nav.Link href="/" className="navbar-brand">Booky</Nav.Link>
+                    <Nav.Link href="/login"><FontAwesomeIcon icon={faUser}/>User</Nav.Link>
                 </div> 
                     
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="col-sm justify-content-end">
                 <Nav>
-                    <Nav.Link href="#home">Search</Nav.Link>
-                    <Nav.Link href="#link">Sell</Nav.Link>
+                    <Nav.Link href="/browse">Search</Nav.Link>
+                    <Nav.Link href="/upload">Sell</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
                

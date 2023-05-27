@@ -1,48 +1,29 @@
 import React, {useEffect, useState} from 'react'
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Header";
 import Footer from "./Footer";
-import Book from "./Book";
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import Home from "../views/Home";
+import Browse from "../views/Browse";
+import Upload from "../views/Upload";
 import UserLogin from './UserLogin';
 
 function App() {
 
-  const [backendData, setBackendData] = useState([{}]);
-  
-  useEffect(() => {
-    fetch("/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      }
-    )
-  }, []);
-
-  
   return (
-    <div> 
-      <Header />
-      <div className="container-sm container-fluid">
-        {(typeof backendData === 'undefined') ? (
-          <p>Loading...</p>
-        ): 
-        backendData.map((book, index) => (
-          <Row xs={1} md={2} className="g-4">
-            {Array.from({ length: 1 }).map((_, idx) => (
-              <Col>
-                <Book key={index} book={book} />
-              </Col>
-            ))}
-          </Row>
-      ))
-        }
+    <Router>
+      <div> 
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route path="/browse" element={<Browse/>} />
+          <Route path="/upload" element={<Upload/>} />
+          <Route path="/login" element = {<UserLogin/>} />
+        </Routes>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  )
+    </Router>
+  );
 }
 
 export default App

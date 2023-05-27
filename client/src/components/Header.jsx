@@ -18,13 +18,13 @@ function Header(){
                     <Nav.Link href="/">
                         <img className="navbar-logo" src="/images/booky-logo.png" alt="Logo"></img>
                     </Nav.Link>
-                    <Nav.Link href="/" className="navbar-brand">Booky</Nav.Link>
-                    <Nav.Link href="/login"><FontAwesomeIcon icon={faUser}/>User</Nav.Link>
+                    <Nav.Link href="/" className="navbar-brand p-2">Booky</Nav.Link>
                 </div> 
                     
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="col-sm justify-content-end">
                 <Nav>
+                    <Nav.Link href="/login"><FontAwesomeIcon icon={faUser} className="me-2"/>User</Nav.Link>
                     <Nav.Link href="/browse">Search</Nav.Link>
                     <Nav.Link href="/upload">Sell</Nav.Link>
                 </Nav>

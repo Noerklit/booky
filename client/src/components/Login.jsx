@@ -9,18 +9,57 @@ import {
   }
   from 'mdb-react-ui-kit';
 
-  function handleForm(){
+  
 
-  }
-
-function Login(){
+function Login({ onLogin }){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    
+    function handleLogin(event){
+        event.preventDefault();
+        
+        fetch("/api/login", {
+            method: 'get',
+            headers: {
+                "Content-Type": "application/json",
+                'Accept': 'application/json'
+            }
+        }).then(response => response.json()).then(data =>{
+            validLogin(data)
+            
+        })
+        console.log("clicked")
+    }
+
+    function validLogin (data){
+        var usernameExists = false;
+        var passwordMatch = false;
+
+        data.forEach(element => {
+            if (element.username === username) {
+                usernameExists = true;
+                if(element.password === password) {
+                    passwordMatch = true;
+                    localStorage.setItem("username", username)
+                    onLogin();
+                }
+            }
+        });
+
+        if(!usernameExists) { 
+            alert("Brugernavn eksisterer ikke")
+        } else {
+            if(!passwordMatch) {
+                alert("Forkert kodeord")
+            }
+        }
+    }
+
     return(
         <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: 'url(https://img-cdn.inc.com/image/upload/w_1024,h_576,c_fill/images/panoramic/GettyImages-900301626_437925_t2i3bm.jpg)'}}>
             <div className='mask gradient-custom-3'></div>
             <MDBCard className='m-5' style={{maxWidth: '600px'}}>
-                <form className="form" onSubmit={handleForm}>
+                <form className="form" onSubmit={handleLogin}>
                 <MDBCardBody className='px-5'>
                 <h2 className="text-uppercase text-center mb-5">Login</h2>
                 <div className="d-flex flex-row align-items-center mb-4 ">

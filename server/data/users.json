@@ -8,15 +8,16 @@
     "password": "123"
   },
   {
-    "username": "",
-    "password": ""
-  },
-  {
     "username": "mads",
     "password": "123"
   },
   {
     "username": "Mads",
+    "password": "123"
+  },
+  {},
+  {
+    "username": "Alex",
     "password": "123"
   }
 ]

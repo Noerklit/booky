@@ -30,7 +30,31 @@ function Listing() {
 
   function handleForm(event) {
     event.preventDefault();
-    // Perform logic to publish the listing here
+        let userData = {
+            picture: picture,
+            title: title,
+            price: price,
+            condition: condition,
+            edition: edition,
+            authors: authors,
+            isbn: isbn,
+            forLending: forLending,
+            startDate: startDate,
+            endDate: endDate,
+            bookID: "",
+            username: localStorage.getItem("username")
+        };
+        fetch("/api/books", {
+            method: 'post',
+            headers: {
+                "Content-Type": "application/json",
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        }).then(response => response.json()).then(data =>{
+            console.log(data)
+        })
+        console.log("clicked")
   }
 
   function handlePictureChange(event) {

@@ -8,7 +8,7 @@ function Home() {
   const [bookData, setBookData] = useState([{}]);
 
   useEffect(() => {
-    fetch("/api")
+    fetch("/api/books")
       .then(response => response.json())
       .then(data => {
         // Sort the book data by title in ascending order

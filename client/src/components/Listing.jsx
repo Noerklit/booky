@@ -65,6 +65,7 @@ function Listing() {
 
   function handleLendingChange(event) {
     setForLending(event.target.checked);
+    setPrice(""); // Reset the price when changing the lending option
   }
 
   const conditionOptions = ["New", "Slightly used", "Used", "Very used"];
@@ -184,7 +185,9 @@ function Listing() {
             <div className="d-flex flex-row align-items-center mb-4">
               <MDBIcon fas icon="dollar-sign me-3" size="lg" />
               <div className="d-flex flex-column">
-                <label htmlFor="price">Price</label>
+                <label htmlFor="price">
+                  {forLending ? "Price per week" : "Price"}
+                </label>
                 <MDBInput
                   wrapperClass="mb-4"
                   size="lg"

@@ -92,5 +92,19 @@
     "endDate": null,
     "bookID": "book5",
     "username": "rasmus"
+  },
+  {
+    "picture": null,
+    "title": "Hej",
+    "price": "10",
+    "condition": "New",
+    "edition": "55",
+    "authors": "Slidte",
+    "isbn": "12354",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "book6",
+    "username": "Mads"
   }
 ]

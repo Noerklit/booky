@@ -70,11 +70,11 @@ function Login({ onLogin, alertLogin }){
                 {alert && alert}{alertLogin}
                 <div className="d-flex flex-row align-items-center mb-4 ">
                     <MDBIcon fas icon="user me-3" size='lg'/>
-                    <MDBInput wrapperClass='mb-4' label='Username' size='lg' id='form1' type='text' name="username" onChange={e=>setUsername(e.target.value)}/>
+                    <MDBInput wrapperClass='mb-4' label='Username' size='lg' id='form1' type='text' name="username" required onChange={e=>setUsername(e.target.value)}/>
                 </div>
                 <div className="d-flex flex-row align-items-center mb-4">
                     <MDBIcon fas icon="key me-3" size='lg'/>
-                    <MDBInput wrapperClass='mb-4' label='Password' size='lg' id='form3' type='password' name="password" onChange={e=>setPassword(e.target.value)}/>
+                    <MDBInput wrapperClass='mb-4' label='Password' size='lg' id='form3' type='password' name="password" required onChange={e=>setPassword(e.target.value)}/>
                 </div>
                 <div className='d-flex flex-row justify-content-center mb-4'>
                    <a href="/signup" className="link-success">Do you not have an account? Register here!</a>

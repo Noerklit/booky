@@ -179,7 +179,7 @@ function Listing() {
                   type="text"
                   name="title"
                   value={title}
-                  onChange={(e) => setTitle(e.target.value)}
+                  required onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ function Listing() {
                   type="text"
                   name="price"
                   value={price}
-                  onChange={(e) => {
+                  required onChange={(e) => {
                     const validatedValue = e.target.value.replace(
                       /[^0-9]/g,
                       ""
@@ -215,7 +215,7 @@ function Listing() {
                   name="condition"
                   className="form-select form-select-lg"
                   value={condition}
-                  onChange={handleConditionChange}
+                  required onChange={handleConditionChange}
                 >
                   <option value="">Select Condition</option>
                   {conditionOptions.map((option) => (
@@ -237,7 +237,7 @@ function Listing() {
                   type="text"
                   name="edition"
                   value={edition}
-                  onChange={(e) => {
+                  required onChange={(e) => {
                     const validatedValue = e.target.value.replace(
                       /[^0-9]/g,
                       ""
@@ -258,7 +258,7 @@ function Listing() {
                   type="text"
                   name="authors"
                   value={authors}
-                  onChange={(e) => setAuthors(e.target.value)}
+                  required onChange={(e) => setAuthors(e.target.value)}
                 />
               </div>
             </div>
@@ -273,7 +273,7 @@ function Listing() {
                   type="text"
                   name="isbn"
                   value={isbn}
-                  onChange={(e) => {
+                  required onChange={(e) => {
                     const validatedValue = e.target.value.replace(
                       /[^0-9]/g,
                       ""

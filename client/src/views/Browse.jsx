@@ -16,24 +16,22 @@ function Browse() {
       });
   }, []);
 
-    return (
-      <div className="container-sm container-fluid">
-        <h1>Browse books here</h1>
-        {typeof bookData === "undefined" ? (
-          <p>Loading...</p>
-        ) : (
-          <Row>
-            {bookData.map((book, index) => (
-              <Col>
-                {Array.from({ length: 1 }).map((_, idx) => (
-                  <Book key={index} book={book} />
-                ))}
-              </Col>
-            ))}
-          </Row>
-        )}
+  return (
+    <div className="container-sm container-fluid">
+      <h1>Browse books here</h1>
+      {typeof bookData === "undefined" ? (
+        <p>Loading...</p>
+      ) : (
+        <Row>
+          {bookData.map((book, index) => (
+            <Col key={index} xs={12} sm={6} md={4} lg={3}>
+              <Book book={book} />
+            </Col>
+          ))}
+        </Row>
+      )}
     </div>
-    );
+  );
   }
   
   export default Browse;

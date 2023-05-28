@@ -13,7 +13,6 @@ function App() {
  
   return (
     <Router>
-      <div> 
         <Header />
         <Routes>
           <Route exact path="/" element={<Home/>} />
@@ -23,7 +22,6 @@ function App() {
           <Route path="/profile" element = {<Profile/>} />
         </Routes>
         <Footer />
-      </div>
     </Router>
   );
 }

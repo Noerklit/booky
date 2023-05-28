@@ -9,8 +9,8 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 function Header(){
     
     return (
-            <header>
-                <Navbar bg="light" expand="lg">
+            <header className='header'>
+                <Navbar expand="lg">
                 <Container className="1">
 
                 <div className="d-flex">

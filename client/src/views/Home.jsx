@@ -1,11 +1,12 @@
 import React from 'react'
+import Homepage from "../components/Landingpage";
 
 
 function Home() {
   
   return (
     <div className="container-sm container-fluid">
-      <h1>Home</h1>
+      <Homepage/>
     </div>
   );
 }

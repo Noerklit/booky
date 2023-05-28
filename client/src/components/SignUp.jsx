@@ -57,7 +57,7 @@ function SignUp() {
                 <div className='d-flex flex-row justify-content-center mb-4'>
                 <a href="/profile" className="link-success">Har du allerede en bruger? Login her!</a>
                 </div>
-                <MDBBtn className='mb-4 w-100 gradient-custom-4 bg-success' size='lg' type="submit" value="submit">Registrer</MDBBtn>
+                <MDBBtn className='mb-4 w-100 gradient-custom-4 bg-success' size='lg' type="submit" value="submit" style={{maxWidth: '300px', maxHeight: '48px'}}>Registrer</MDBBtn>
                 </MDBCardBody>
                 </form>
             </MDBCard>

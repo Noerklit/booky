@@ -80,7 +80,7 @@ function Login({ onLogin }){
                    <a href="/signup" className="link-success">Har du ikke en bruger? Registrer her!</a>
                 </div>
                 
-                <MDBBtn className='bg-success mb-4 w-100 gradient-custom-4' size='lg' type="submit" value="submit">Login</MDBBtn>
+                <MDBBtn className='bg-success mb-4 w-100 gradient-custom-4' size='lg' type="submit" value="submit" style={{maxWidth: '300px', maxHeight: '48px'}}>Login</MDBBtn>
                 </MDBCardBody>
                 </form>
             </MDBCard>

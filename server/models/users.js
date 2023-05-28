@@ -38,13 +38,11 @@ function addUser(userInfo) {
             console.log(err);
         } else {
             data.forEach(element => {
-                console.log(element)
                 if(userInfo.username === element.username) {
-                    console.log()
                     userExists = true;
                 }
             });
-            console.log(userExists)
+            console.log("userexists?", userExists)
             if(userExists) {
                 userExists = false;
                 console.log("Username is taken")

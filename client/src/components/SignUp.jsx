@@ -15,7 +15,7 @@ function SignUp() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-     function handleForm(event){
+    function handleForm(event){
         event.preventDefault();
         let userData = {
             username: username,
@@ -31,7 +31,7 @@ function SignUp() {
         }).then(response => response.json()).then(data =>{
             console.log(data)
         })
-        window.location.replace('/login')
+        window.location.replace('/profile')
         console.log("clicked")
     }
 
@@ -55,9 +55,9 @@ function SignUp() {
                     <MDBInput wrapperClass='mb-4' label='Gentag kodeord' size='lg' id='form4' type='password'/>
                 </div>
                 <div className='d-flex flex-row justify-content-center mb-4'>
-                <a href="/login" className="link-success">Har du allerede en bruger? Login her!</a>
+                <a href="/profile" className="link-success">Har du allerede en bruger? Login her!</a>
                 </div>
-                <MDBBtn className='mb-4 w-100 gradient-custom-4 bg-success' size='lg' type="submit" value="submit">Registrer</MDBBtn>
+                <MDBBtn className='mb-4 w-100 gradient-custom-4 bg-success' size='lg' type="submit" value="submit" style={{maxWidth: '300px', maxHeight: '48px'}}>Registrer</MDBBtn>
                 </MDBCardBody>
                 </form>
             </MDBCard>

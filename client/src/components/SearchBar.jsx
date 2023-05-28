@@ -5,7 +5,7 @@ import { Button, Container, Form} from "react-bootstrap";
 
 function SearchBar(){
     return (
-        <Container class="container-fluid">
+        <Container className="container-fluid">
               <Form className="d-flex justify-content-center">
                 <Form.Control
                   type="search"

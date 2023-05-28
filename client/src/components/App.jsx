@@ -7,11 +7,11 @@ import Home from "../views/Home";
 import Browse from "../views/Browse";
 import Upload from "../views/Upload";
 import SignUp from './SignUp';
-import Login from './Login'
 import Listing from './Listing';
+import Profile from '../views/Profile';
 
 function App() {
-  const user = localStorage.getItem;
+ 
   return (
     <Router>
       <div> 
@@ -21,8 +21,7 @@ function App() {
           <Route path="/browse" element={<Browse/>} />
           <Route path="/upload" element={<Listing/>} />
           <Route path="/signup" element = {<SignUp/>} />
-
-          <Route path="/login" element = {<Login/>} />
+          <Route path="/profile" element = {<Profile/>} />
         </Routes>
         <Footer />
       </div>

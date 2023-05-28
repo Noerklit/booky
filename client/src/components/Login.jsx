@@ -12,7 +12,7 @@ import {
 
   
 
-function Login({ onLogin }){
+function Login({ onLogin, alertLogin }){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [alert, setAlert] = useState(null);
@@ -67,7 +67,7 @@ function Login({ onLogin }){
                 <form className="form" onSubmit={handleLogin}>
                 <MDBCardBody className='px-5'>
                 <h2 className="text-uppercase text-center mb-5">Login</h2>
-                {alert}
+                {alert && alert}{alertLogin}
                 <div className="d-flex flex-row align-items-center mb-4 ">
                     <MDBIcon fas icon="user me-3" size='lg'/>
                     <MDBInput wrapperClass='mb-4' label='Username' size='lg' id='form1' type='text' name="username" onChange={e=>setUsername(e.target.value)}/>

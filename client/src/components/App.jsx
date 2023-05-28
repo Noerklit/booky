@@ -7,6 +7,7 @@ import Home from "../views/Home";
 import Browse from "../views/Browse";
 import Upload from "../views/Upload";
 import SignUp from './SignUp';
+import Listing from './Listing';
 import Profile from '../views/Profile';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route path="/browse" element={<Browse/>} />
-          <Route path="/upload" element={<Upload/>} />
+          <Route path="/upload" element={<Listing/>} />
           <Route path="/signup" element = {<SignUp/>} />
           <Route path="/profile" element = {<Profile/>} />
         </Routes>

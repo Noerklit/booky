@@ -1,9 +1,26 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import Listing from "../components/Listing";
+import Login from "../components/Login";
 
 function Upload() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+      const username = localStorage.getItem("username");
+      setLoggedIn(username !== null);
+  }, []);
+
+  const handleLogin = () => {
+    setLoggedIn(true);
+  };
+
 
     return (
-      <h1>Upload book here</h1>
+      <div>
+        {loggedIn ? 
+        <Listing/> : 
+        <Login onLogin={handleLogin}/> }
+      </div>
     );
   }
   

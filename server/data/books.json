@@ -14,7 +14,7 @@
     "imagePath": "https://imgcdn.saxo.com/_9781292159041",
     "language": "English",
     "condition": "new",
-    "ownerId": "user3762035",
+    "bookID": "book0",
     "id": "book1232767"
   },
   {
@@ -31,7 +31,7 @@
     "imagePath": "https://www.booktopia.com.au/covers/big/9780357114087/0000/discrete-mathematics-with-applications-metric-edition.jpg",
     "language": "English",
     "condition": "Very used, handwritten notes",
-    "ownerId": "user3762035",
+    "bookID": "book1",
     "id": "book5532367"
   },
   {
@@ -48,8 +48,8 @@
     "imagePath": "https://www.williamdam.dk/2906493-large_default/it-projektarbejde.jpg",
     "language": "Danish",
     "condition": "Very used, handwritten notes",
-    "ownerId": "user3762035",
-    "id": "book4216732"
+    "bookID": "book2",
+    "username": "rasmus"
   },
   {
     "picture": null,
@@ -63,6 +63,34 @@
     "startDate": null,
     "endDate": null,
     "bookID": "book3",
-    "username": null
+    "username": "rasmus"
+  },
+  {
+    "picture": null,
+    "title": "testbog",
+    "price": "123",
+    "condition": "New",
+    "edition": "2",
+    "authors": "test author",
+    "isbn": "1231232",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "book4",
+    "username": "rasmus"
+  },
+  {
+    "picture": null,
+    "title": "Alex er lækker",
+    "price": "99999",
+    "condition": "Very used",
+    "edition": "9",
+    "authors": "Alex ham selv",
+    "isbn": "420691337",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "book5",
+    "username": "rasmus"
   }
 ]

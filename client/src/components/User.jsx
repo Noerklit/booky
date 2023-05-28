@@ -1,9 +1,29 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from 'react'
+import Book from "../components/Book";
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 
 
 
 function User({ onLogout }){
+    const [bookData, setBookData] = useState([{}]);
+    const loggedInUser = localStorage.getItem("username")
+
+    useEffect(() => {
+        fetch("/api/books")
+        .then(response => response.json())
+        .then(data => {
+            // Sort the book data by title in ascending order
+            const userBooks = findUserBooks(data, loggedInUser)
+            const sortedData = userBooks.sort((a, b) => a.title.localeCompare(b.title));
+            setBookData(sortedData);
+        });
+    }, [loggedInUser]);
+
+    function findUserBooks(data, loggedInUser) {
+        return data.filter(element => element.username === loggedInUser);
+    }
 
     function handleLogout(event) {
         event.preventDefault();
@@ -13,9 +33,28 @@ function User({ onLogout }){
     const username = localStorage.getItem("username");
     return(
         
-        <div>
+        <div className="container-sm container-fluid">
             <h1>Welcome {username}</h1>
-            <Button className="bg-danger" type="submit" onClick={handleLogout}>Logout</Button>{' '}
+            <div className="justify-content-end d-flex">
+            <Button className="bg-danger" type="submit" onClick={handleLogout}>Logout</Button>
+            </div>
+
+            <div>
+                <h2>Your listings</h2>
+                 {typeof bookData === "undefined" ? (
+        <p>Loading...</p>
+      ) : (
+        <Row>
+          {bookData.map((book, index) => (
+            <Col>
+              {Array.from({ length: 1 }).map((_, idx) => (
+                <Book key={index} book={book} />
+              ))}
+            </Col>
+          ))}
+        </Row>
+      )}
+        </div>
         </div>
     );
 }

@@ -5,24 +5,24 @@ import Row from 'react-bootstrap/Row';
 
 
 function Home() {
-    const [backendData, setBackendData] = useState([{}]);
+    const [bookData, setBookData] = useState([{}]);
   
   useEffect(() => {
     fetch("/api").then(
       response => response.json()
     ).then(
       data => {
-        setBackendData(data)
+        setBookData(data)
       }
     )
   }, []);
     return (
         <div className="container-sm container-fluid">
-          {(typeof backendData === 'undefined') ? (
+          {(typeof bookData === 'undefined') ? (
             <p>Loading...</p>
           ): 
         <Row>
-          {backendData.map((book, index) => (
+          {bookData.map((book, index) => (
             <Col>
             {Array.from({ length: 1 }).map((_, idx) => (
                   <Book key={index} book={book}/>

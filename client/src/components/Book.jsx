@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 function Book({ book }) {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', alignItems: 'flex-start' }}>
-      <Card className="card" style={{ height: '500px', width: '300px', marginBottom: '20px' }}>
+      <Card className="card" style={{ height: '500px', width: '300px', marginBottom: '20px', border: '2px solid rgb(28, 21, 1)' }}>
         <Card.Img variant="top" src={book.imagePath} alt={book.title} style={{ objectFit: 'cover', height: '350px', width: '100%' }} />
         <Card.Body className="card-body" style={{ textAlign: 'center' }}>
           <Card.Title className="card-title" style={{ fontSize: '17px' }}>{book.title}, {book.edition}. edition</Card.Title>

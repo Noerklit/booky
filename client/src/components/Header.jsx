@@ -31,7 +31,7 @@ function Header(){
                 <Nav>
                     <Nav.Link href="/profile"><FontAwesomeIcon icon={faUser} className="me-2"/>Profile</Nav.Link>
                     <Nav.Link href="/browse">Browse</Nav.Link>
-                    <Nav.Link href="/upload">Sell</Nav.Link>
+                    <Nav.Link href="/upload">Sell/Rent</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
                

@@ -86,7 +86,58 @@ function Listing() {
       <MDBCard className="m-5" style={{ maxWidth: "600px" }}>
         <form className="form" onSubmit={handleForm}>
           <MDBCardBody className="px-5">
-            <h2 className="text-uppercase text-center mb-5">Listing</h2>
+            <h2 className="text-uppercase text-center mb-5">Sell/rent book</h2>
+            <div className="d-flex flex-column mb-4">
+              <div className="d-flex align-items-center">
+                <input
+                  type="checkbox"
+                  id="forLending"
+                  checked={forLending}
+                  onChange={handleLendingChange}
+                />
+                <label htmlFor="forLending" className="ms-2">
+                  This book is for rent - leave empty if selling
+                </label>
+              </div>
+              {forLending && (
+                <div className="d-flex flex-column mt-2">
+                  <label htmlFor="lendingPeriod" className="me-2 ">
+                    Rent period:
+                  </label>
+                  <div className="d-flex flex-row align-items-center">
+                    <MDBIcon fas icon="calendar-alt" className="me-2" />
+                    <div className="d-flex flex-column">
+                      <DatePicker
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        selectsStart
+                        startDate={startDate}
+                        endDate={endDate}
+                        placeholderText="Start Date"
+                        wrapperClassName="mb-4" // Apply the same wrapperClass as other textFields
+                        className="form-control form-control-lg" // Apply the same size and styling classes as other textFields
+                        dateFormat="dd/MM/yyyy" // Set the date format to European format
+                        minDate={new Date()} // Set minDate to today's date
+                        locale="en-GB" // Set the locale to en-GB for European dates
+                      />
+                      <DatePicker
+                        selected={endDate}
+                        onChange={(date) => setEndDate(date)}
+                        selectsEnd
+                        startDate={startDate}
+                        endDate={endDate}
+                        minDate={startDate || new Date()} // Set minDate to either selected start date or today's date
+                        placeholderText="End Date"
+                        wrapperClassName="mb-4" // Apply the same wrapperClass as other textFields
+                        className="form-control form-control-lg" // Apply the same size and styling classes as other textFields
+                        dateFormat="dd/MM/yyyy" // Set the date format to European format
+                        locale="en-GB" // Set the locale to en-GB for European dates
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
             <label
               htmlFor="picture"
               className="me-3"
@@ -228,57 +279,7 @@ function Listing() {
                 />
               </div>
             </div>
-            <div className="d-flex flex-column mb-4">
-              <div className="d-flex align-items-center">
-                <input
-                  type="checkbox"
-                  id="forLending"
-                  checked={forLending}
-                  onChange={handleLendingChange}
-                />
-                <label htmlFor="forLending" className="ms-2">
-                  For Lending
-                </label>
-              </div>
-              {forLending && (
-                <div className="d-flex flex-column mt-2">
-                  <label htmlFor="lendingPeriod" className="me-2">
-                    Lending Period:
-                  </label>
-                  <div className="d-flex flex-row align-items-center">
-                    <MDBIcon fas icon="calendar-alt" className="me-2" />
-                    <div className="d-flex flex-column">
-                      <DatePicker
-                        selected={startDate}
-                        onChange={(date) => setStartDate(date)}
-                        selectsStart
-                        startDate={startDate}
-                        endDate={endDate}
-                        placeholderText="Start Date"
-                        wrapperClassName="mb-4" // Apply the same wrapperClass as other textFields
-                        className="form-control form-control-lg" // Apply the same size and styling classes as other textFields
-                        dateFormat="dd/MM/yyyy" // Set the date format to European format
-                        minDate={new Date()} // Set minDate to today's date
-                        locale="en-GB" // Set the locale to en-GB for European dates
-                      />
-                      <DatePicker
-                        selected={endDate}
-                        onChange={(date) => setEndDate(date)}
-                        selectsEnd
-                        startDate={startDate}
-                        endDate={endDate}
-                        minDate={startDate || new Date()} // Set minDate to either selected start date or today's date
-                        placeholderText="End Date"
-                        wrapperClassName="mb-4" // Apply the same wrapperClass as other textFields
-                        className="form-control form-control-lg" // Apply the same size and styling classes as other textFields
-                        dateFormat="dd/MM/yyyy" // Set the date format to European format
-                        locale="en-GB" // Set the locale to en-GB for European dates
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+            
             <MDBBtn
               className="bg-success mb-4 w-100 gradient-custom-4"
               size="lg"

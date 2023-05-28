@@ -51,11 +51,11 @@ function Login({ onLogin }){
 
         if(!usernameExists) { 
             //alert("Brugernavn eksisterer ikke")
-            setAlert(<div className="alert alert-danger">Brugernavn eksisterer ikke</div>);
+            setAlert(<div className="alert alert-danger">Username does not exist</div>);
 
         } else {
             if(!passwordMatch) {
-                setAlert(<div className="alert alert-danger">Forkert kodeord</div>);
+                setAlert(<div className="alert alert-danger">Wrong password</div>);
             }
         }
     }
@@ -70,14 +70,14 @@ function Login({ onLogin }){
                 {alert}
                 <div className="d-flex flex-row align-items-center mb-4 ">
                     <MDBIcon fas icon="user me-3" size='lg'/>
-                    <MDBInput wrapperClass='mb-4' label='Brugernavn' size='lg' id='form1' type='text' name="username" onChange={e=>setUsername(e.target.value)}/>
+                    <MDBInput wrapperClass='mb-4' label='Username' size='lg' id='form1' type='text' name="username" onChange={e=>setUsername(e.target.value)}/>
                 </div>
                 <div className="d-flex flex-row align-items-center mb-4">
                     <MDBIcon fas icon="key me-3" size='lg'/>
-                    <MDBInput wrapperClass='mb-4' label='Kodeord' size='lg' id='form3' type='password' name="password" onChange={e=>setPassword(e.target.value)}/>
+                    <MDBInput wrapperClass='mb-4' label='Password' size='lg' id='form3' type='password' name="password" onChange={e=>setPassword(e.target.value)}/>
                 </div>
                 <div className='d-flex flex-row justify-content-center mb-4'>
-                   <a href="/signup" className="link-success">Har du ikke en bruger? Registrer her!</a>
+                   <a href="/signup" className="link-success">Do you not have an account? Register here!</a>
                 </div>
                 
                 <MDBBtn className='bg-success mb-4 w-100 gradient-custom-4' size='lg' type="submit" value="submit" style={{maxWidth: '300px', maxHeight: '48px'}}>Login</MDBBtn>

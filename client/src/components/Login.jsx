@@ -6,6 +6,7 @@ import {
     MDBCardBody,
     MDBInput,
     MDBIcon,
+    MDBAlert
   }
   from 'mdb-react-ui-kit';
 
@@ -14,6 +15,8 @@ import {
 function Login({ onLogin }){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [alert, setAlert] = useState(null);
+
     
     function handleLogin(event){
         event.preventDefault();
@@ -47,10 +50,12 @@ function Login({ onLogin }){
         });
 
         if(!usernameExists) { 
-            alert("Brugernavn eksisterer ikke")
+            //alert("Brugernavn eksisterer ikke")
+            setAlert(<div className="alert alert-danger">Brugernavn eksisterer ikke</div>);
+
         } else {
             if(!passwordMatch) {
-                alert("Forkert kodeord")
+                setAlert(<div className="alert alert-danger">Forkert kodeord</div>);
             }
         }
     }
@@ -62,6 +67,7 @@ function Login({ onLogin }){
                 <form className="form" onSubmit={handleLogin}>
                 <MDBCardBody className='px-5'>
                 <h2 className="text-uppercase text-center mb-5">Login</h2>
+                {alert}
                 <div className="d-flex flex-row align-items-center mb-4 ">
                     <MDBIcon fas icon="user me-3" size='lg'/>
                     <MDBInput wrapperClass='mb-4' label='Brugernavn' size='lg' id='form1' type='text' name="username" onChange={e=>setUsername(e.target.value)}/>
@@ -73,6 +79,7 @@ function Login({ onLogin }){
                 <div className='d-flex flex-row justify-content-center mb-4'>
                    <a href="/signup" className="link-success">Har du ikke en bruger? Registrer her!</a>
                 </div>
+                
                 <MDBBtn className='bg-success mb-4 w-100 gradient-custom-4' size='lg' type="submit" value="submit">Login</MDBBtn>
                 </MDBCardBody>
                 </form>

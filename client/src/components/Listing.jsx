@@ -60,7 +60,7 @@ function Listing() {
     >
       <div className="mask gradient-custom-3"></div>
       <MDBCard className="m-5" style={{ maxWidth: "600px" }}>
-        <form className="form" onSubmit={handleForm} style={{ width: "500px" }}>
+        <form className="form" onSubmit={handleForm}>
           <MDBCardBody className="px-5">
             <h2 className="text-uppercase text-center mb-5">Listing</h2>
             <label
@@ -260,7 +260,7 @@ function Listing() {
               size="lg"
               type="submit"
               value="submit"
-              style={{ height: "50px" }}
+              style={{ maxWidth: "350px", maxHeight: "48px"}}
             >
               Publish
             </MDBBtn>

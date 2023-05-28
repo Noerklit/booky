@@ -75,7 +75,7 @@ function Login({ onLogin, alertLogin }){
                             </div>
                             <div>
                                 <label htmlFor="form1">Username</label>
-                                <MDBInput wrapperClass='mb-4' label='Username' size='lg' id='form1' type='text' name="username" required onChange={e=>setUsername(e.target.value)}/>
+                                <MDBInput wrapperClass='mb-4' size='lg' id='form1' type='text' name="username" required onChange={e=>setUsername(e.target.value)}/>
                             </div>
                         </div>
                         <div className="mb-4 d-flex align-items-center justify-content-center">

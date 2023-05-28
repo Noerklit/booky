@@ -54,6 +54,7 @@ function Listing() {
         }).then(response => response.json()).then(data =>{
             console.log(data)
         })
+        window.location.replace('/profile')
         console.log("clicked")
   }
 
@@ -106,7 +107,7 @@ function Listing() {
                     Rent period:
                   </label>
                   <div className="d-flex flex-row align-items-center">
-                    <MDBIcon fas icon="calendar-alt" className="me-2" />
+                    <MDBIcon fas icon="calendar-alt" className="me-2" style={{ marginBottom: '24px' }}/>
                     <div className="d-flex flex-column">
                       <DatePicker
                         selected={startDate}

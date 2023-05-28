@@ -3,11 +3,12 @@ import Login from "../components/Login";
 import User from "../components/User";
 
 function Profile(){
-    const [loggedIn, setLoggedIn] = useState(false);
+     const [loggedIn, setLoggedIn] = useState(false);
 
     useEffect(() => {
         const username = localStorage.getItem("username");
         setLoggedIn(username !== null);
+        
   }, []);
 
   const handleLogin = () => {
@@ -18,8 +19,6 @@ function Profile(){
     setLoggedIn(false);
   };
 
-    console.log(loggedIn)
-    console.log(localStorage.getItem("username"))
     return(
         loggedIn ? (
              <User onLogout={handleLogout} /> 

@@ -9,7 +9,7 @@ function SearchBar(){
               <Form className="d-flex justify-content-center">
                 <Form.Control
                   type="search"
-                  placeholder="Søg på titel, forfatter eller ISBN"
+                  placeholder="Search for title, author or ISBN"
                   className="me-2 rounded-pill"
                   aria-label="Search"
                 />

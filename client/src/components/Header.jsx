@@ -22,7 +22,7 @@ function Header(){
                 </div> 
                 
                 <form className="form-inline">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Søg på titel, forfatter eller ISBN" aria-label="Search"></input>
+                    <input className="form-control mr-sm-2" type="search" placeholder="Search for title, author or ISBN" aria-label="Search"></input>
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 {/* <SearchBar className="searchBar"/> */}
@@ -31,7 +31,7 @@ function Header(){
                 <Nav>
                     <Nav.Link href="/profile"><FontAwesomeIcon icon={faUser} className="me-2"/>Profile</Nav.Link>
                     <Nav.Link href="/browse">Browse</Nav.Link>
-                    <Nav.Link href="/upload">Sell</Nav.Link>
+                    <Nav.Link href="/upload">Sell/Rent</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
                

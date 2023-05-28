@@ -6,10 +6,11 @@ import Footer from "./Footer";
 import Home from "../views/Home";
 import Browse from "../views/Browse";
 import Upload from "../views/Upload";
-import UserLogin from './UserLogin';
+import SignUp from './SignUp';
+import Login from './Login'
 
 function App() {
-
+  const user = localStorage.getItem;
   return (
     <Router>
       <div> 
@@ -18,7 +19,9 @@ function App() {
           <Route exact path="/" element={<Home/>} />
           <Route path="/browse" element={<Browse/>} />
           <Route path="/upload" element={<Upload/>} />
-          <Route path="/login" element = {<UserLogin/>} />
+          <Route path="/signup" element = {<SignUp/>} />
+
+          <Route path="/login" element = {<Login/>} />
         </Routes>
         <Footer />
       </div>

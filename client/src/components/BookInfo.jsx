@@ -29,15 +29,16 @@ function BookInfo() {
 
   const formattedStartDate = new Date(book.startDate).toLocaleDateString();
   const formattedEndDate = new Date(book.endDate).toLocaleDateString();
-  
+  const placeholderImage = '/images/placeholder-book.png'
+  const imagePath = book.imagePath || placeholderImage; // Use the placeholder image if imagePath is null
 
-    return (
-      <MDBContainer fluid className="py-4">
+  return (
+    <MDBContainer fluid className="py-4">
       <MDBRow className="justify-content-center">
         <MDBCol md="6">
           <MDBRow>
             <MDBCol md="6">
-              <img src={book.imagePath} className="img-fluid" alt="Book Cover" />
+              <img src={imagePath} className="img-fluid mh-20 " alt="Book Cover" />
             </MDBCol>
             <MDBCol md="6">
               <h2>{book.title}</h2>

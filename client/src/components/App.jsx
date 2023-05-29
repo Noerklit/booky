@@ -8,6 +8,8 @@ import Browse from "../views/Browse";
 import Upload from "../views/Upload";
 import SignUp from './SignUp';
 import Profile from '../views/Profile';
+import Book from './Book';
+import BookInfo from './BookInfo';
 
 function App() {
  
@@ -20,6 +22,7 @@ function App() {
           <Route path="/upload" element={<Upload />} />
           <Route path="/signup" element = {<SignUp/>} />
           <Route path="/profile" element = {<Profile/>} />
+          <Route exact path="/:id" element={<BookInfo />} />
         </Routes>
         <Footer />
     </Router>

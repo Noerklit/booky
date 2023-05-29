@@ -46,7 +46,7 @@ function User({ onLogout }){
       ) : (
         <Row>
           {bookData.map((book, index) => (
-            <Col key={index} xs={12} sm={6} md={6} lg={4}>
+            <Col key={index} xs={12} sm={6} md={6} lg={3}>
               <Book book={book} />
             </Col>
           ))}

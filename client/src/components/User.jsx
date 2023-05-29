@@ -46,10 +46,8 @@ function User({ onLogout }){
       ) : (
         <Row>
           {bookData.map((book, index) => (
-            <Col>
-              {Array.from({ length: 1 }).map((_, idx) => (
-                <Book key={index} book={book} />
-              ))}
+            <Col key={index} xs={12} sm={6} md={6} lg={4}>
+              <Book book={book} />
             </Col>
           ))}
         </Row>

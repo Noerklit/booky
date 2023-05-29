@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import {
     MDBBtn,
     MDBContainer,
@@ -78,7 +78,7 @@ function SignUp() {
                             </div>
                         </div>
                         <div className='d-flex flex-row justify-content-center mb-4'>
-                            <a href="/profile" className="link-success">Do you already have an account? Sign in here!</a>
+                            <Link to="/profile" className="link-success">Do you already have an account? Sign in here!</Link>
                         </div>
                         <MDBBtn className="bg-success mb-4 w-100 gradient-custom-4" size="lg" type="submit" value="submit" style={{ maxWidth: "300px", maxHeight: "48px" }}> Sign up </MDBBtn>
                     </MDBCardBody>

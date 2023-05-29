@@ -1,4 +1,5 @@
 import React,  {useState}   from "react";
+import { Link } from 'react-router-dom';
 import {
     MDBBtn,
     MDBContainer,
@@ -88,7 +89,7 @@ function Login({ onLogin, alertLogin }){
                             </div>
                         </div>
                         <div className="d-flex flex-row justify-content-center mb-4">
-                            <a href="/signup" className="link-success"> Do you not have an account? Register here! </a>
+                            <Link to="/signup" className="link-success"> Do you not have an account? Register here! </Link>
                         </div>
                         <MDBBtn className="bg-success mb-4 w-100 gradient-custom-4" size="lg" type="submit" value="submit" style={{ maxWidth: "300px", maxHeight: "48px" }}> Login </MDBBtn>
                     </MDBCardBody>

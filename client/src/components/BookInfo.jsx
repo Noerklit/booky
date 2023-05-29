@@ -29,6 +29,7 @@ function BookInfo() {
 
   const formattedStartDate = new Date(book.startDate).toLocaleDateString();
   const formattedEndDate = new Date(book.endDate).toLocaleDateString();
+  
 
     return (
       <MDBContainer fluid className="py-4">
@@ -43,9 +44,9 @@ function BookInfo() {
               <p>Author: {book.authors}</p>
               <p>ISBN: {book.isbn}</p>
               <p>Edition: {book.edition}</p>
+              {book.forLending ? <p>Price per week: {book.price} kr.</p> : <p>Price: {book.price} kr.</p>}
               <p>Price: {book.price} kr.</p>
               <p>Condition: {book.condition}</p>
-              
               {book.forLending ? (
                 <>
                   <span className="badge bg-success">Available for lending</span>

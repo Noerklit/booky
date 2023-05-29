@@ -45,7 +45,6 @@ function BookInfo() {
               <p>ISBN: {book.isbn}</p>
               <p>Edition: {book.edition}</p>
               {book.forLending ? <p>Price per week: {book.price} kr.</p> : <p>Price: {book.price} kr.</p>}
-              <p>Price: {book.price} kr.</p>
               <p>Condition: {book.condition}</p>
               {book.forLending ? (
                 <>

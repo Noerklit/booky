@@ -1,7 +1,11 @@
 # Start up Server
 Navigate into server folder in terminal and run command:
 
-`nodemon run dev`
+`npm install`
+
+After all dependencies have been installed, server can be started with command:
+
+`npm run dev`
 
 Check if server is running on localhost:5000/api
 

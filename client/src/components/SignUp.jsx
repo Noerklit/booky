@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react'
-import {browserHistory} from "react-router";
+import { useNavigate } from 'react-router-dom';
 import {
     MDBBtn,
     MDBContainer,
     MDBCard,
     MDBCardBody,
     MDBInput,
-    MDBCheckbox,
     MDBIcon
   }
   from 'mdb-react-ui-kit';
@@ -16,6 +15,8 @@ function SignUp() {
     const [password1, setPassword1] = useState("");
     const [password2, setPassword2] = useState("");
     const[alert, setAlert] = useState(null);
+    
+    const navigate = useNavigate();
 
     function handleForm(event){
         event.preventDefault();
@@ -34,7 +35,7 @@ function SignUp() {
             }).then(response => response.json()).then(data =>{
                 console.log(data)
             })
-            window.location.replace('/profile')
+            navigate('/profile')
             console.log("clicked")
         } else setAlert(<div className="alert alert-danger">Passwords do not match</div>);
     }
@@ -48,7 +49,7 @@ function SignUp() {
             <MDBCard className='m-5' style={{maxWidth: '600px'}}>
                 <form className="form" onSubmit={handleForm}>
                     <MDBCardBody className='px-5'>
-                        <h2 className="text-uppercase text-center mb-5">Create user</h2>
+                        <h2 className="text-uppercase text-center mb-5 display-6">Create user</h2>
                         <div className="mb-4 d-flex align-items-center justify-content-center">
                             <div className="me-3">
                                 <MDBIcon fas icon="user" size="lg" />
@@ -79,7 +80,7 @@ function SignUp() {
                         <div className='d-flex flex-row justify-content-center mb-4'>
                             <a href="/profile" className="link-success">Do you already have an account? Sign in here!</a>
                         </div>
-                        <MDBBtn className="bg-success mb-4 w-100 gradient-custom-4" size="lg" type="submit" value="submit" style={{ maxWidth: "300px", maxHeight: "48px" }}> Login </MDBBtn>
+                        <MDBBtn className="bg-success mb-4 w-100 gradient-custom-4" size="lg" type="submit" value="submit" style={{ maxWidth: "300px", maxHeight: "48px" }}> Sign up </MDBBtn>
                     </MDBCardBody>
                 </form>
             </MDBCard>

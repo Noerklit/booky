@@ -66,7 +66,7 @@ function Login({ onLogin, alertLogin }){
             <MDBCard className="m-5" style={{ maxWidth: "600px" }}>
                 <form className="form" onSubmit={handleLogin}>
                     <MDBCardBody className="px-5">
-                        <h2 className="text-uppercase text-center mb-5">Login</h2>
+                        <h2 className="text-uppercase text-center mb-5 display-6">Login</h2>
                         {alert && alert}
                         {alertLogin}
                         <div className="mb-4 d-flex align-items-center justify-content-center">

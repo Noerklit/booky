@@ -24,6 +24,16 @@ html {
   .navbar-nav a:hover {
       color: #fff !important;
   }
+
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+
+  .card-link:hover {
+    color: #1abc9c;
+  }
   
   .navbar-brand a{
     /*font-weight: bold;*/

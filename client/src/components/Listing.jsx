@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import {
   MDBBtn,
   MDBContainer,
@@ -16,7 +17,7 @@ registerLocale("en-GB", enGB);
 setDefaultLocale("en-GB");
 
 function Listing() {
-  const [picture, setPicture] = useState(null);
+  const [imagePath, setImagePath] = useState(null);
   const [picturePreview, setPicturePreview] = useState(null); // New state for the picture preview
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
@@ -27,20 +28,22 @@ function Listing() {
   const [forLending, setForLending] = useState(false);
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
+  
+  const navigate = useNavigate();
 
   function handleForm(event) {
     event.preventDefault();
         let userData = {
-            picture: picture,
-            title: title,
-            price: price,
-            condition: condition,
+            isbn: isbn,
+			title: title,
             edition: edition,
             authors: authors,
-            isbn: isbn,
+            price: price,
+            imagePath: imagePath,
             forLending: forLending,
             startDate: startDate,
             endDate: endDate,
+            condition: condition,
             bookID: "",
             username: localStorage.getItem("username")
         };
@@ -53,14 +56,17 @@ function Listing() {
             body: JSON.stringify(userData)
         }).then(response => response.json()).then(data =>{
             console.log(data)
+			setTimeout(() => {
+				navigate('/profile');
+			}, 500)
         })
-        window.location.replace('/profile')
+        
         console.log("clicked")
   }
 
   function handlePictureChange(event) {
     const file = event.target.files[0];
-    setPicture(file);
+    setImagePath(file);
     setPicturePreview(URL.createObjectURL(file));
   }
 
@@ -81,7 +87,7 @@ function Listing() {
         	<MDBCard className="m-5" style={{ maxWidth: "600px" }}>
             	<form className="form" onSubmit={handleForm}>
               		<MDBCardBody className="px-5">
-                		<h2 className="text-uppercase text-center mb-5">Sell/rent book</h2>
+                		<h2 className="text-uppercase text-center mb-5 display-6">Sell/rent book</h2>
                 		<div className="d-flex flex-column mb-4">
                 		  	<div className="d-flex align-items-center">
                 		    	<input type="checkbox" id="forLending" checked={forLending} onChange={handleLendingChange}/>
@@ -107,9 +113,9 @@ function Listing() {
             			    	<input type="file" accept="image/*" id="picture" onChange={handlePictureChange}/>
             			  	</div>
             			</div>
-            			{picture && (
+            			{imagePath && (
             			  <div className="d-flex justify-content-center align-items-center mb-4">
-            			    <img src={URL.createObjectURL(picture)} alt="Selected" style={{ maxWidth: "100%", maxHeight: "200px" }}/>
+            			    <img src={URL.createObjectURL(imagePath)} alt="Selected" style={{ maxWidth: "100%", maxHeight: "200px" }}/>
             			  </div>
             			)}
             			<div className="d-flex flex-row align-items-center mb-4">
@@ -120,9 +126,9 @@ function Listing() {
             			  	</div>
             			</div>
             			<div className="d-flex flex-row align-items-center mb-4">
-            			  	<MDBIcon fas icon="dollar-sign me-3" size="lg" />
+            			  	<MDBIcon fas icon="money-bill me-3" size="lg" />
             			  	<div className="d-flex flex-column">
-            			  	  	<label htmlFor="price"> {forLending ? "Price per week" : "Price"} </label>
+            			  	  	<label htmlFor="price"> {forLending ? "Price per week (DKK)" : "Price (DKK)"} </label>
             			  	  	<MDBInput wrapperClass="mb-4" size="lg" id="price" type="text" name="price" value={price} required onChange={(e) => {
             			  	      	const validatedValue = e.target.value.replace(/[^0-9]/g, "");
             			  	      	setPrice(validatedValue);

@@ -1,19 +1,23 @@
 import React from "react";
-import { MDBBtn, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
+import { useNavigate } from 'react-router-dom';
+import { MDBBtn, MDBContainer} from "mdb-react-ui-kit";
 
-function handleProfileChange() {
-  window.location.replace('/profile');
-}
-
-function handleBrowseChange() {
-  window.location.replace('/browse');
-}
-
-function handleListingChange() {
-  window.location.replace('/upload');
-}
 
 function LandingPage() {
+  const navigate = useNavigate();
+
+  function handleProfileChange() {
+    navigate('/profile');
+  }
+  
+  function handleBrowseChange() {
+    navigate('/browse');
+  }
+  
+  function handleListingChange() {
+    navigate('/upload');
+  }
+
   return (
     <MDBContainer 
         fluid 

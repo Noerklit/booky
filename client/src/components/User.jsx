@@ -34,13 +34,13 @@ function User({ onLogout }){
     return(
         
         <div className="container-sm container-fluid">
-            <h1>Welcome {username}</h1>
+            <h1 className="display-4">Welcome {username}</h1>
             <div className="justify-content-end d-flex">
             <Button className="bg-danger" type="submit" onClick={handleLogout}>Logout</Button>
             </div>
 
             <div>
-                <h2>Your listings</h2>
+                <h2 className="display-6">Your listings</h2>
                  {typeof bookData === "undefined" ? (
         <p>Loading...</p>
       ) : (

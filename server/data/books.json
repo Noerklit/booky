@@ -15,7 +15,8 @@
     "language": "English",
     "condition": "new",
     "bookID": "book0",
-    "id": "book1232767"
+    "id": "book1232767",
+    "username": "rasmus"
   },
   {
     "isbn": "9780357114087",
@@ -32,7 +33,8 @@
     "language": "English",
     "condition": "Very used, handwritten notes",
     "bookID": "book1",
-    "id": "book5532367"
+    "id": "book5532367",
+    "username": "rasmus"
   },
   {
     "isbn": "9788757453683",
@@ -41,32 +43,31 @@
     "authors": [
       "Henriette Moos"
     ],
-    "publicationDate": "26-08-2022",
-    "purchaseDate": "1-09-2022",
-    "originalPrice": "264.95",
     "price": "100.00",
     "imagePath": "https://www.williamdam.dk/2906493-large_default/it-projektarbejde.jpg",
-    "language": "Danish",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
     "condition": "Very used, handwritten notes",
     "bookID": "book2",
     "username": "rasmus"
   },
   {
-    "picture": null,
+    "isbn": "145",
     "title": "Frederik og katten",
-    "price": "123",
-    "condition": "New",
     "edition": "3",
     "authors": "Rasmus Nielsen",
-    "isbn": "145",
+    "price": "123",
+    "imagePath": null,
     "forLending": false,
     "startDate": null,
     "endDate": null,
+    "condition": "New",
     "bookID": "book3",
     "username": "rasmus"
   },
   {
-    "picture": null,
+    "imagePath": null,
     "title": "testbog",
     "price": "123",
     "condition": "New",
@@ -80,7 +81,7 @@
     "username": "rasmus"
   },
   {
-    "picture": null,
+    "imagePath": null,
     "title": "Alex er lækker",
     "price": "99999",
     "condition": "Very used",
@@ -94,7 +95,7 @@
     "username": "rasmus"
   },
   {
-    "picture": null,
+    "imagePath": null,
     "title": "Hej",
     "price": "10",
     "condition": "New",
@@ -106,5 +107,159 @@
     "endDate": null,
     "bookID": "book6",
     "username": "Mads"
+  },
+  {
+    "imagePath": null,
+    "title": "test ID",
+    "price": "1337",
+    "condition": "New",
+    "edition": "2",
+    "authors": "Unique ID",
+    "isbn": "6969696969",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "c14fe9bf-4ba2-4b3e-b8c0-b45d46d7667e",
+    "username": "rasmus"
+  },
+  {
+    "imagePath": null,
+    "title": "useNavigate",
+    "price": "123",
+    "condition": "New",
+    "edition": "123",
+    "authors": "asdas",
+    "isbn": "12312312",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "7425ba4a-8ded-4e36-bc88-c9559ef91939",
+    "username": "rasmus"
+  },
+  {
+    "imagePath": null,
+    "title": "useNavigate",
+    "price": "123",
+    "condition": "New",
+    "edition": "123",
+    "authors": "asdas",
+    "isbn": "12312312",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "f5f77b50-cbe2-4c2d-bf73-3031fe3c80a5",
+    "username": "rasmus"
+  },
+  {
+    "imagePath": null,
+    "title": "TestBook",
+    "price": "123",
+    "condition": "New",
+    "edition": "123",
+    "authors": "test UAhtor",
+    "isbn": "12312312",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "f8f34445-5c51-47b0-a055-8d0b34962eb3",
+    "username": "rasmus"
+  },
+  {
+    "imagePath": null,
+    "title": "asdsadas",
+    "price": "123",
+    "condition": "Slightly used",
+    "edition": "12312",
+    "authors": "123123",
+    "isbn": "123123123",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "80b682a0-aad7-49df-b51a-24fc61d18ea6",
+    "username": "rasmus"
+  },
+  {
+    "imagePath": null,
+    "title": "Dette er en test",
+    "price": "91919",
+    "condition": "New",
+    "edition": "12",
+    "authors": "Dette er en test",
+    "isbn": "123",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "19a6c04d-8ca4-4806-8505-84f7507c3c84",
+    "username": "rasmus"
+  },
+  {
+    "imagePath": null,
+    "title": "qweqw",
+    "price": "123",
+    "condition": "Slightly used",
+    "edition": "123",
+    "authors": "123",
+    "isbn": "312312",
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "bookID": "94d48a5f-fd61-4cd9-8584-93e048bfc068",
+    "username": "rasmus"
+  },
+  {
+    "isbn": "1231231",
+    "title": "arranged order",
+    "edition": "2",
+    "authors": "Arranged author",
+    "price": "6969",
+    "imagePath": null,
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "condition": "Slightly used",
+    "bookID": "377f6d4d-4244-4887-91ae-60ac19740bbb",
+    "username": "rasmus"
+  },
+  {
+    "isbn": "123123",
+    "title": "Available for lending",
+    "edition": "2",
+    "authors": "Lending authro",
+    "price": "100",
+    "imagePath": null,
+    "forLending": true,
+    "startDate": "2023-05-28T22:00:00.000Z",
+    "endDate": "2023-06-28T22:00:00.000Z",
+    "condition": "Slightly used",
+    "bookID": "824ac347-c1f2-42df-a7ee-bbcec0c8a76b",
+    "username": "rasmus"
+  },
+  {
+    "isbn": "91237817",
+    "title": "1 setTimeout",
+    "edition": "123",
+    "authors": "Set Timeout",
+    "price": "123",
+    "imagePath": null,
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "condition": "New",
+    "bookID": "00b6e514-fa14-40ae-9e19-bdb79adfe1fc",
+    "username": "rasmus"
+  },
+  {
+    "isbn": "781301231",
+    "title": "1 Test delay",
+    "edition": "12",
+    "authors": "Delay Test",
+    "price": "123",
+    "imagePath": null,
+    "forLending": false,
+    "startDate": null,
+    "endDate": null,
+    "condition": "Slightly used",
+    "bookID": "bacd52b4-ee18-4d32-bb8c-bcb5bd0a1929",
+    "username": "rasmus"
   }
 ]

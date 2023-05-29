@@ -18,7 +18,7 @@ function Browse() {
 
   return (
     <div className="container-sm container-fluid">
-      <h1>Browse books here</h1>
+      <h1 className="display-4">Browse books here</h1>
       {typeof bookData === "undefined" ? (
         <p>Loading...</p>
       ) : (

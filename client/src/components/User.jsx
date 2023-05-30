@@ -29,9 +29,25 @@ function User({ onLogout }){
         localStorage.removeItem("username");
         onLogout();
     }
+
+    const handleDelete = (bookID) => {
+      fetch(`/api/books/${bookID}`, {
+        method: 'DELETE',
+      })
+        .then(response => {
+          if (response.ok) {
+            setBookData(prevBooks => prevBooks.filter(book => book.bookID !== bookID));
+          } else {
+            console.log('Failed to delete book');
+          }
+        })
+        .catch(error => {
+          console.log('Error occurred while deleting the book:', error);
+        });
+    };
+
     const username = localStorage.getItem("username");
     return(
-        
         <div className="container-sm container-fluid">
             <h1 className="display-4">Welcome {username}</h1>
             <div className="justify-content-end d-flex">
@@ -46,7 +62,7 @@ function User({ onLogout }){
         <Row>
           {bookData.map((book, index) => (
             <Col key={index} xs={12} sm={6} md={6} lg={4}>
-              <Book book={book} />
+              <Book key={book.bookID} book={book} onDelete={handleDelete} />
             </Col>
           ))}
         </Row>

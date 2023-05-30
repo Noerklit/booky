@@ -31,18 +31,18 @@ function User({ onLogout }){
     }
 
     const handleDelete = (bookID) => {
-      fetch(`/api/books/${bookID}`, {
-        method: 'DELETE',
-      })
+      	fetch(`/api/books/${bookID}`, {
+        	method: 'DELETE',
+      	})
         .then(response => {
-          if (response.ok) {
-            setBookData(prevBooks => prevBooks.filter(book => book.bookID !== bookID));
-          } else {
-            console.log('Failed to delete book');
-          }
+          	if (response.ok) {
+            	setBookData(prevBooks => prevBooks.filter(book => book.bookID !== bookID));
+          	} else {
+            	console.log('Failed to delete book');
+          	}
         })
         .catch(error => {
-          console.log('Error occurred while deleting the book:', error);
+          	console.log('Error occurred while deleting the book:', error);
         });
     };
 

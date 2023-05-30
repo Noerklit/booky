@@ -79,7 +79,6 @@ function Listing() {
 
   	return (
 		<MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image" style={{backgroundImage: "url(https://img-cdn.inc.com/image/upload/w_1024,h_576,c_fill/images/panoramic/GettyImages-900301626_437925_t2i3bm.jpg)"}}>
-    	    <div className="mask gradient-custom-3"></div>
     	    	<MDBCard className="m-5" style={{ maxWidth: "600px" }}>
     	        	<form className="form" onSubmit={handleForm}>
     	          		<MDBCardBody className="px-5">

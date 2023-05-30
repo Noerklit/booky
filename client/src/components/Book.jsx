@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Book({ book }) {
   const placeholderImage = '/images/placeholder-book.png'
-  const imagePath = book.imagePath || placeholderImage; // Use the placeholder image if imagePath is null
+  const imagePath = book.imagePath || placeholderImage;
 
   return (
     <Link to={`/${book.bookID}`} className="card-link" >

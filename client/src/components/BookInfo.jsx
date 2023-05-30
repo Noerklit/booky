@@ -30,7 +30,7 @@ function BookInfo() {
   const formattedStartDate = new Date(book.startDate).toLocaleDateString();
   const formattedEndDate = new Date(book.endDate).toLocaleDateString();
   const placeholderImage = '/images/placeholder-book.png'
-  const imagePath = book.imagePath || placeholderImage; // Use the placeholder image if imagePath is null
+  const imagePath = book.imagePath || placeholderImage; 
 
   return (
     <MDBContainer fluid className="py-4">

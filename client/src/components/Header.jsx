@@ -26,7 +26,6 @@ function Header(){
                     <input className="form-control mr-sm-2" type="search" placeholder="Search for title, author or ISBN" aria-label="Search"></input>
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
-                {/* <SearchBar className="searchBar"/> */}
             
                 <Navbar.Collapse className="col-sm justify-content-end">
                 <Nav >

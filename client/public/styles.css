@@ -90,3 +90,12 @@ html {
   #root {
     min-height: 100%;
   }
+  .px-5{
+    padding: 0%;
+  }
+
+  @media (max-width: 767px) {
+  .d-flex .m-5 {
+    margin: 0 !important;
+  }
+}

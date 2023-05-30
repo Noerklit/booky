@@ -32,21 +32,21 @@ function LandingPage() {
       </div>
       <div className="d-flex flex-column align-items-center mt-4">
       <MDBBtn 
-        className="w-100 mb-2 btn-rounded btn-lg gradient-custom-1"
+        className="w-100 mb-2 btn-rounded btn-lg"
         style={{ backgroundColor: "#1abc9c", color: "#fff", maxWidth: "169.38px", maxHeight: "48px"}}
         onClick={handleProfileChange}
         >
           Go to profile
         </MDBBtn>
         <MDBBtn 
-            className="w-100 mb-2 btn-rounded btn-lg gradient-custom-2"
+            className="w-100 mb-2 btn-rounded btn-lg"
             style={{ backgroundColor: "#1abc9c", color: "#fff", maxWidth: "169.38px", maxHeight: "48px"}}
             onClick={handleBrowseChange}
         >
           Browse Books
         </MDBBtn>
         <MDBBtn 
-            className="w-100 btn-rounded btn-lg gradient-custom-3"
+            className="w-100 btn-rounded btn-lg"
             style={{ backgroundColor: "#1abc9c", color: "#fff", maxWidth: "169.38px", maxHeight: "48px"}}
             onClick={handleListingChange}
         >

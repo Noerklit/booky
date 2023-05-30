@@ -174,7 +174,7 @@ function Listing() {
             			  		}}/>
             			  	</div>
             			</div>
-            		<MDBBtn className="bg-success mb-4 w-100 gradient-custom-4" size="lg" type="submit" value="submit" style={{ maxWidth: "350px", maxHeight: "48px"}}> Publish </MDBBtn>
+            		<MDBBtn className="bg-success mb-4 w-100" size="lg" type="submit" value="submit" style={{ maxWidth: "350px", maxHeight: "48px"}}> Publish </MDBBtn>
           		</MDBCardBody>
         	</form>
       	</MDBCard>

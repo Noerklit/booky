@@ -65,8 +65,8 @@ function SignUp() {
                                 <MDBIcon fas icon="key" size="lg" />
                             </div>
                             <div>
-                                <label htmlFor="form3">Password</label>
-                                <MDBInput wrapperClass="mb-4" size="lg" id="form3" type="password" name="password" required onChange={(e) => setPassword1(e.target.value)}/>
+                                <label htmlFor="form2">Password</label>
+                                <MDBInput wrapperClass="mb-4" size="lg" id="form2" type="password" name="password" required onChange={(e) => setPassword1(e.target.value)}/>
                             </div>
                         </div>
                         <div className="mb-4 d-flex align-items-center justify-content-center">

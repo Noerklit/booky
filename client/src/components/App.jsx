@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Header";
@@ -8,7 +8,6 @@ import Browse from "../views/Browse";
 import Upload from "../views/Upload";
 import SignUp from './SignUp';
 import Profile from '../views/Profile';
-import Book from './Book';
 import BookInfo from './BookInfo';
 
 function App() {

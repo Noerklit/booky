@@ -18,7 +18,6 @@ setDefaultLocale("en-GB");
 
 function Listing() {
   const [imagePath, setImagePath] = useState(null);
-  const [picturePreview, setPicturePreview] = useState(null); // New state for the picture preview
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [condition, setCondition] = useState("");
@@ -58,7 +57,7 @@ function Listing() {
             console.log(data)
 			setTimeout(() => {
 				navigate('/profile');
-			}, 500)
+			}, 1000)
         })
         
         console.log("clicked")
@@ -67,7 +66,6 @@ function Listing() {
   function handlePictureChange(event) {
     const file = event.target.files[0];
     setImagePath(file);
-    setPicturePreview(URL.createObjectURL(file));
   }
 
   function handleLendingChange(event) {

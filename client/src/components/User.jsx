@@ -14,7 +14,6 @@ function User({ onLogout }){
         fetch("/api/books")
         .then(response => response.json())
         .then(data => {
-            // Sort the book data by title in ascending order
             const userBooks = findUserBooks(data, loggedInUser)
             const sortedData = userBooks.sort((a, b) => a.title.localeCompare(b.title));
             setBookData(sortedData);

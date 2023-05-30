@@ -22,8 +22,17 @@ html {
       letter-spacing: 5px;
   }
   .navbar-nav a:hover {
-      color: #fff !important;
+      color: pink !important;
+      
   }
+  .navbar-nav {
+    color: #fff !important;
+    font-family: 'Font Name', sans-serif;
+  }
+  .navbar-nav .nav-link {
+    color: #fff !important; 
+  }
+
 
   .card-link {
     text-decoration: none;
@@ -35,9 +44,10 @@ html {
     color: #1abc9c;
   }
   
-  .navbar-brand a{
-    /*font-weight: bold;*/
-    font-size: 2rem;
+  .navbar-brand {
+    color: #fff !important;
+    font-family: 'Pacifico', sans-serif;
+    letter-spacing: 1px;
   }
   
   .navbar-logo {
@@ -49,6 +59,12 @@ html {
   .form-inline {
     display: flex;
     flex-grow: 1;
+}
+.form-inline .btn {
+  color: white;
+}
+.form-inline .btn:hover {
+  color: black;
 }
 
 .form-control {

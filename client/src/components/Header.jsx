@@ -24,7 +24,7 @@ function Header(){
                 
                 <form className="form-inline">
                     <input className="form-control mr-sm-2" type="search" placeholder="Search for title, author or ISBN" aria-label="Search"></input>
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button className="btn btn-outline-success my-2 my-sm-0 rounded-circle" type="submit" style={{ borderColor: '#ec9131', backgroundColor: '#ec9131' }}><i className="fas fa-search"></i></button>
                 </form>
             
                 <Navbar.Collapse className="col-sm justify-content-end">

@@ -37,23 +37,24 @@ function BookInfo() {
         	<MDBCol md="6">
           		<MDBRow>
             		<MDBCol md="6">
-            		  <img src={imagePath} className="img-fluid mh-20 " alt="Book Cover" />
+            		  	<img src={imagePath} className="img-fluid mh-20 " alt="Book Cover" />
             		</MDBCol>
             		<MDBCol md="6">
-            		  <h2>{book.title}</h2>
-            		  <p>Author: {book.authors}</p>
-            		  <p>ISBN: {book.isbn}</p>
-            		  <p>Edition: {book.edition}</p>
-            		  {book.forLending ? <p>Price per week: {book.price} kr.</p> : <p>Price: {book.price} kr.</p>}
-            		  <p>Condition: {book.condition}</p>
-            		  {book.forLending ? (
-            		    <>
-            		      <span className="badge bg-success">Available for lending</span>
-            		      <p>Lending Period: {formattedStartDate} to {formattedEndDate}</p>
-            		    </>
-            		  ) : ( 
-            		      <span className="badge bg-success">Book is for sale</span>              )}
-            		      <p className="fw-bold">Contact user: {book.username}</p>
+            		  	<h2>{book.title}</h2>
+            		  	<p>Author: {book.authors}</p>
+            		  	<p>ISBN: {book.isbn}</p>
+            		  	<p>Edition: {book.edition}</p>
+            		  	{book.forLending ? <p>Price per week: {book.price} kr.</p> : <p>Price: {book.price} kr.</p>}
+            		  	<p>Condition: {book.condition}</p>
+            		  	{book.forLending ? (
+            		    	<>
+            		      		<span className="badge bg-success">Available for lending</span>
+            		      		<p>Lending Period: {formattedStartDate} to {formattedEndDate}</p>
+            		    	</>
+            		  	) : ( 
+            		      	<span className="badge bg-success">Book is for sale</span>              
+						)}
+            		    <p className="fw-bold">Contact user: {book.username}</p>
             		</MDBCol>
           		</MDBRow>
         	</MDBCol>

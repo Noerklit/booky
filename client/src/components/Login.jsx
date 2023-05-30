@@ -6,8 +6,7 @@ import {
     MDBCard,
     MDBCardBody,
     MDBInput,
-    MDBIcon,
-    MDBAlert
+    MDBIcon
   }
   from 'mdb-react-ui-kit';
 
@@ -51,7 +50,6 @@ function Login({ onLogin, alertLogin }){
         });
 
         if(!usernameExists) { 
-            //alert("Brugernavn eksisterer ikke")
             setAlert(<div className="alert alert-danger">Username does not exist</div>);
 
         } else {

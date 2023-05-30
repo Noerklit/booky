@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import {
     MDBBtn,
@@ -49,6 +49,7 @@ function SignUp() {
             <MDBCard className='m-5' style={{maxWidth: '600px'}}>
                 <form className="form" onSubmit={handleForm}>
                     <MDBCardBody className='px-5'>
+                        {alert}
                         <h2 className="text-uppercase text-center mb-5 display-6">Create user</h2>
                         <div className="mb-4 d-flex align-items-center justify-content-center">
                             <div className="me-3">
@@ -56,7 +57,7 @@ function SignUp() {
                             </div>
                             <div>
                                 <label htmlFor="form1">Username</label>
-                                <MDBInput wrapperClass="mb-4" size="lg" id="form1" type="text" name="username" required onChange={(e) => setUsername(e.target.value)}/>
+                                <MDBInput wrapperClass="mb-4" size="lg" type="text" name="username" required onChange={(e) => setUsername(e.target.value)}/>
                             </div>
                         </div>
                         <div className="mb-4 d-flex align-items-center justify-content-center">
@@ -64,8 +65,8 @@ function SignUp() {
                                 <MDBIcon fas icon="key" size="lg" />
                             </div>
                             <div>
-                                <label htmlFor="form3">Password</label>
-                                <MDBInput wrapperClass="mb-4" size="lg" id="form3" type="password" name="password" required onChange={(e) => setPassword1(e.target.value)}/>
+                                <label htmlFor="form2">Password</label>
+                                <MDBInput wrapperClass="mb-4" size="lg" id="form2" type="password" name="password" required onChange={(e) => setPassword1(e.target.value)}/>
                             </div>
                         </div>
                         <div className="mb-4 d-flex align-items-center justify-content-center">

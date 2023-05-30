@@ -86,10 +86,8 @@ function SignUp() {
                 </form>
             </MDBCard>
         </MDBContainer>
-  )
+    )
 }
-
-
 
 export default SignUp
 

@@ -61,7 +61,6 @@ function Login({ onLogin, alertLogin }){
 
     return (
         <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image" style={{backgroundImage: "url(https://img-cdn.inc.com/image/upload/w_1024,h_576,c_fill/images/panoramic/GettyImages-900301626_437925_t2i3bm.jpg)",}}>
-            <div className="mask gradient-custom-3"></div>
             <MDBCard className="m-5" style={{ maxWidth: "600px" }}>
                 <form className="form" onSubmit={handleLogin}>
                     <MDBCardBody className="px-5">
@@ -94,7 +93,7 @@ function Login({ onLogin, alertLogin }){
                 </form>
             </MDBCard>
         </MDBContainer>
-      );
+    );
 }
 
 export default Login;

@@ -30,6 +30,26 @@ router.post("/", (req,res) => {
     res.json({"message": "Form submitted"})
 })
 
+router.delete("/:id", (req, res) => {
+    const bookID = req.params.id;
+    const index = books.findIndex(book => book.bookID === bookID);
+  
+    if (index !== -1) {
+        books.splice(index, 1);
+  
+        fs.writeFile("./data/books.json", JSON.stringify(books, null, 2), err => {
+            if (err) {
+                console.log(err);
+                res.status(500).json({ error: "Failed to delete book" });
+            } else {
+                res.json({ message: "Book deleted successfully" });
+            }
+        });
+    } else {
+        res.status(404).json({ error: "Book not found" });
+    }
+});
+
 function jsonReader(filePath, cb) {
     fs.readFile(filePath, 'utf-8', (err, fileData) => {
         if (err) {
@@ -60,10 +80,6 @@ function addBook(bookInfo) {
             });
         }
     });
-}
-
-function addBookID() {
-    return "book" + books.length;
 }
 
 module.exports = router;

@@ -53,7 +53,7 @@ function addUser(userInfo) {
                         console.log(err);
                     }
                 });
- 1           }
+            }
         }
     });
 }

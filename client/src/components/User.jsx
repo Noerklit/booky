@@ -51,23 +51,22 @@ function User({ onLogout }){
         <div className="container-sm container-fluid">
             <h1 className="display-4">Welcome {username}</h1>
             <div className="justify-content-end d-flex">
-            <Button className="bg-danger" type="submit" onClick={handleLogout}>Logout</Button>
+            	<Button className="bg-danger" type="submit" onClick={handleLogout}>Logout</Button>
             </div>
-
             <div>
                 <h2 className="display-6">Your listings</h2>
-                 {typeof bookData === "undefined" ? (
-        <p>Loading...</p>
-      ) : (
-        <Row>
-          {bookData.map((book, index) => (
-            <Col key={index} xs={12} sm={6} md={6} lg={4}>
-              <Book key={book.bookID} book={book} onDelete={handleDelete} />
-            </Col>
-          ))}
-        </Row>
-      )}
-        </div>
+                {typeof bookData === "undefined" ? (
+        			<p>Loading...</p>
+      			) : (
+        			<Row>
+        			  	{bookData.map((book, index) => (
+        			    	<Col key={index} xs={12} sm={6} md={6} lg={4}>
+        			      		<Book key={book.bookID} book={book} onDelete={handleDelete} />
+        			    	</Col>
+        			  	))}
+        			</Row>
+      			)}
+        	</div>
         </div>
     );
 }

@@ -4,11 +4,11 @@ import Homepage from "../components/Landingpage";
 
 function Home() {
   
-  return (
-    <div className="container-sm container-fluid">
-      <Homepage/>
-    </div>
-  );
+  	return (
+    	<div className="container-sm container-fluid">
+      		<Homepage/>
+    	</div>
+  	);
 }
 
 export default Home;

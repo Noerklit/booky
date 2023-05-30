@@ -12,20 +12,20 @@ import BookInfo from './BookInfo';
 
 function App() {
  
-  return (
-    <Router>
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route path="/browse" element={<Browse/>} />
-          <Route path="/upload" element={<Upload />} />
-          <Route path="/signup" element = {<SignUp/>} />
-          <Route path="/profile" element = {<Profile/>} />
-          <Route exact path="/:id" element={<BookInfo />} />
-        </Routes>
-        <Footer />
-    </Router>
-  );
+  	return (
+    	<Router>
+        	<Header />
+        		<Routes>
+          		<Route exact path="/" element={<Home/>} />
+          		<Route path="/browse" element={<Browse/>} />
+          		<Route path="/upload" element={<Upload />} />
+          		<Route path="/signup" element = {<SignUp/>} />
+          		<Route path="/profile" element = {<Profile/>} />
+          		<Route exact path="/:id" element={<BookInfo />} />
+        		</Routes>
+        	<Footer />
+    	</Router>
+  	);
 }
 
 export default App
